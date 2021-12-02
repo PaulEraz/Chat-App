@@ -23,6 +23,11 @@ body {
   background-color: var(--primary-color-alt);
 }
 
+img {
+  width: 50px;
+  height: 50px;
+}
+
 /* GENERAL */
 .flex {
   display: flex;
@@ -33,6 +38,11 @@ body {
 .flex--sb {
   justify-content: space-between;
 }
+
+.flex--jc-fs {
+  justify-content: flex-start;
+}
+
 /* END OF GENERAL */
 
 /* SIGNUP */
@@ -43,6 +53,14 @@ body {
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  .signup,
+  .wrapper {
+    min-width: 500px;
+    max-width: 550px;
+  }
 }
 
 .signup > p {
@@ -105,6 +123,7 @@ body {
 .signup div:last-child p {
   margin-right: 5px;
 }
+
 /* END OF SIGNUP */
 
 /* USERS */
@@ -114,7 +133,6 @@ body {
 }
 
 .user img {
-  width: 50px;
   margin-right: 10px;
   border-radius: 50%;
 }
@@ -174,7 +192,8 @@ body {
   color: var(--secondary-color-text);
 }
 
-.user-list::-webkit-scrollbar {
+.user-list::-webkit-scrollbar,
+.chat-box::-webkit-scrollbar {
   width: 0;
 }
 
@@ -185,3 +204,89 @@ body {
 .status .offline {
   color: var(--secondary-color-text);
 }
+/* END OF USERS */
+
+/* CHAT */
+.chat {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--primary-color-alt);
+}
+
+.chat img {
+  margin-right: 10px;
+}
+
+.go-back {
+  font-size: 1.7rem;
+  margin: 0 10px;
+  color: var(--secondary-color);
+}
+
+.details p:first-child {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+/* chatbox */
+.sent,
+.received {
+  display: flex;
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+.content p {
+  padding: 5px 10px;
+}
+
+.sent {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 15px 15px 0;
+  margin-left: auto;
+  max-width: calc(100% - 100px);
+}
+
+.received img {
+  width: 30px;
+  height: 30px;
+  align-self: flex-end;
+  margin-right: 5px;
+}
+
+.received .content {
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.25);
+  margin-right: auto;
+  max-width: calc(100% - 100px);
+  border-radius: 15px 15px 15px 0;
+}
+
+.chat-box {
+  height: 500px;
+  overflow-y: auto;
+}
+
+.typing-area {
+  padding: 10px;
+}
+
+.typing-area input {
+  padding: 5px;
+  width: 100%;
+  margin-right: 5px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid var(--secondary-color-text);
+  outline: none;
+}
+
+.typing-area button {
+  width: 50px;
+  height: 32px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+/* END OF CHAT */
