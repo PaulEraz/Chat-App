@@ -2,4 +2,4 @@
 
 ## Project in progress
 
-Learninh PHP and SQL
+Learning PHP and SQL
